@@ -1,0 +1,293 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* phần nav bar*/
+.navbar {
+  color: #000;
+}
+.navbar .nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+.navbar .nav-item:hover {
+  font-weight: bold;
+  border-bottom: solid 2px #eb7617;
+}
+
+/*phần carousel*/
+#content div {
+  /* position: absolute; */
+  height: 50px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  #content h2 {
+    font-size: 12px;
+  }
+}
+
+
+/*các khóa học phổ biến*/
+.col-item {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.col-item .photo img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.col-item .info {
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  margin-top: 1px;
+}
+
+.col-item:hover .info {
+  background-color: #f5f5dc;
+}
+
+.col-item .price {
+  /*width: 50%;*/
+  float: left;
+  margin-top: 5px;
+}
+
+.col-item .price h5 {
+  line-height: 20px;
+  margin: 0;
+}
+
+.price-text-color {
+  color: #219fd1;
+}
+
+.col-item .info .rating {
+  color: #777;
+}
+
+.col-item .rating {
+  /*width: 50%;*/
+  float: left;
+  font-size: 17px;
+  text-align: right;
+  line-height: 52px;
+  margin-bottom: 10px;
+  height: 52px;
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
+
+/*AUTHOR*/
+#authors img {
+  margin-top: -50px;
+}
+
+#authors .fa {
+  font-size: 25px;
+}
+
+#authors .card:hover {
+  background: #dce3e4;
+  color: #fff;
+}
+#authors .card:hover .fa {
+  color: #fff;
+}
+
+/* social-icon */
+.gioithieu h5 {
+  font-size: 12px;
+}
+.social-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  line-height: 80px;
+  border: 1px solid #ebebeb;
+  font-size: 30px;
+  color: #ff6700;
+}
+/*  */
+
+/*Giảng viên*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.btnGV {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  /* background-color: #000; */
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.btnGV a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.btnGV:hover,
+a:hover {
+  opacity: 0.7;
+}
+/*  */
+.tim{
+  background-image: url(../../img/cta2-background.jpg);
+  background-attachment: fixed;
+}
+.lienhe {
+  background-image: url(../../img/cta2-background.jpg);
+  background-attachment: fixed;
+  /* background-image: linear-gradient(to bottom, #374050 0%, #798696 100%); */
+  opacity: 0.7;
+  color: #fff;
+}
+.btn {
+  border-radius: 40px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  color: #ebebeb;
+}
+
+/* cảm nhận học viên */
+.camnhanhv{
+  background-image: url(../../img/img_bg_2.jpg);
+  
+  background-attachment: fixed;
+}
+.camnhanhv img{
+  width: 100%;
+  height: auto;
+}
+
+/* Slides */
+.trinhchieu {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* lui &  buttons */
+.lui,
+.tien {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  /* color: #888; */
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.tien {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.lui:hover,
+.tien:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.cham-container {
+  text-align: center;
+  padding: 20px;
+  /* background: #ddd; */
+}
+
+/* The dots/bullets/indicators */
+.cham {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.hd, .cham:hover {
+  background-color: #717171;
+}
+
+
+/* Add a blue color to the author */
+.nguoidung {
+  color: cornflowerblue;
+}
+.nx > img{
+  border-radius: 50%;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 80%;
+}
+.carousel-item {
+  position: relative;
+}
+.carousel-caption {
+  position: absolute;
+  top: 20%;
+}
+
+
+/*phần footer*/
+footer {
+  background-color: #04091e;
+  color: #e1e1e1;
+}
+.social-lh {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+}

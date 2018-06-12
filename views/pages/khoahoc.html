@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CyberSoft</title>
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="../../assets/src1/resources/img/favicon.png">
+    <!--     Sweet Alert     -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Login-Register : CSS và JS -->
+    <link rel="stylesheet" href="../../assets/src1/resources/css/login-register.css">
+    <script src="../../assets/src1/resources/js/login-register.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="../../assets/src1/resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/src1/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/src1/resources/css/style_mycourses.css">
+    <link rel="stylesheet" href="../../assets/src1/resources/css/slick-theme.css">
+    <link rel="stylesheet" href="../../assets/src1/resources/css/slick.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm fixed-top container-fluid navbar-dark" id="menu">
+        <div class="container-fluid d-flex justify-content-center">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="d-flex justify-content-center font-weight-bold">
+                <div class="navbar-header">
+                    <a class="navbar-brand text-warning" href="index.html">Cyber Soft</a>
+                </div>
+                <div class="collapse navbar-collapse text-warning" id="nav-content">
+                    <ul class="navbar-nav text-uppercase ml-auto text-warning">
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link ">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="khoahoc.html" class="nav-link">Khóa học</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn nav-link font-weight-bold" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" id="TenChuTK">
+                                Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn nav-link font-weight-bold" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">
+                                Đăng ký</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="modal fade login" id="loginModal">
+        <div class="modal-dialog login animated">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Đăng nhập</h4>
+
+                </div>
+                <div class="modal-body">
+                    <div class="box">
+                        <div class="content">
+                            <div class="error"></div>
+                            <div class="form loginBox">
+                                <form method="post" action="/login" accept-charset="UTF-8">
+                                    <input id="taikhoan_dn" class="form-control" type="text" placeholder="Tài khoản" name="email">
+                                    <input id="matkhau_dn" class="form-control" type="password" placeholder="Mật khẩu" name="password">
+                                    <input class="btn btn-default btn-login" type="button" value="Đăng nhập" id="btnDangNhap">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content registerBox" style="display:none;">
+                            <div class="form">
+                                <form>
+                                    <div class="form-group input-group">
+                                        <input type="text" placeholder="Tài khoản" class="form-control" id="TK">
+                                    </div>
+                                    <div class="form-group input-group">
+                                        <input type="password" placeholder="Mật khẩu " class="form-control" id="MK">
+                                    </div>
+
+                                    <div class="form-group input-group">
+                                        <input type="text" placeholder="Họ tên" class="form-control" id="HT">
+                                    </div>
+
+                                    <div class="form-group input-group">
+                                        <input type="email" placeholder="Email" class="form-control" id="EM">
+                                    </div>
+
+                                    <div class="form-group input-group">
+                                        <input type="number" placeholder="Số điện thoại" class="form-control" id="SDT">
+                                    </div>
+                                </form>
+                                <div class="form-group">
+                                    <button class="btn btn-danger  btn-login" id="btnDangKy">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="forgot login-footer">
+                        <span>Bạn chưa có tài khoản ?
+                            <a href="javascript: showRegisterForm();">Tạo ngay</a>
+                        </span>
+                    </div>
+                    <div class="forgot register-footer" style="display:none">
+                        <span>Bạn đã có tài khoản ?</span>
+                        <a href="javascript: showLoginForm();">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto text-center pt-5">
+                    <h1 class="font-weight-bold">KHÓA HỌC</h1>
+                    <p class="text-white link-nav">
+                        <a href="index.html" class="text-white">Trang chủ </a>
+                        <span class="lnr lnr-arrow-right">
+                            <i class="fa fa-angle-double-right"></i>
+                        </span>
+                        <a href="khoahoc.html" class="text-white"> Khóa học</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="body" class="container-fluid pb-4">
+        <div class="row">
+            <div id="Courses" class="tabcontent col-xs-0 col-md-10">
+                <div class="container">
+                    <h1 class="text-center mt-4 pb-3 text-warning">Học lập trình tại CyberSoft</h1>
+                    <div class="row">
+                        <div class="item active">
+                            <div class="row" id="DSKhoaHocDangCo">
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Paris" class="tabcontent col-xs-0 col-md-10">
+                <div class="container">
+                    <h1 class="text-center mt-4 pb-3 text-warning">Khóa học đã đăng ký</h1>
+                    <div class="row">
+                        <div class="item active">
+                            <div class="row" id="DSKhoaHocCuaToi">
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Tokyo" class="tabcontent col-xs-0 col-md-10">
+                <div class="container">
+                    <h1 class="text-center mt-4 pb-3 text-warning">Thông tin tài khoản</h1>
+                    <div class="row form-group" id="ThongTinTK">
+                        <div class="col-md-3">
+                            <label for="TaiKhoan">Tài khoản:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="form-control" id="TaiKhoan">HocVien</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="HoTen">Họ tên:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="form-control" id="HoTen">abc</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="Email">Email</label>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="form-control" id="Email">demo@gmail.com</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="SoDienThoai">Số điện thoại:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="form-control" id="SoDienThoai">1234567890</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="MaLoaiNguoiDung">Mã người dùng:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="form-control" id="MaLoaiNguoiDung">HV</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="TenLoaiNguoiDung">Tên người dùng:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="form-control" id="TenLoaiNguoiDung">Học viên</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab col-xs-12 col-md-2">
+                <input type="search" class="form-control mb-3 mt-3 tablinks btn-outline-warning" id="tukhoa" placeholder="Tìm kiếm khóa học"
+                    onkeyup="LocKhoaHoc();">
+                <button class="tablinks btn btn-outline-warning" onclick="openCity(event, 'Courses')" id="defaultOpen">Khóa học tại Cyber</button>
+                <button class="tablinks btn btn-outline-warning" onclick="openCity(event, 'Paris')">Khóa học của bạn</button>
+                <button class="tablinks btn btn-outline-warning" onclick="openCity(event, 'Tokyo')">Thông tin tài khoản</button>
+                <button href="../pages/index.html" class="tablinks btn btn-danger" id="btnThoat">
+                    <p>Thoát</p>
+                </button>
+
+                <div class="pt-3 btn-outline-warning">
+                    <button class="btn btn-danger text-danger font-weight-bold">Đề xuất cho bạn</button>
+                    <div class="photo">
+                        <img src="../../assets/src1/resources/img/img18.jpg" class="img-responsive" alt="a" />
+                    </div>
+                    <div class="info">
+                        <div class="row">
+                            <div class="price col-md-6">
+                                <p class="">Dữ liệu & Giải thuật</p>
+                                <p class="price-text-color">Robin Hard</p>
+                                <h6>32 giờ học</h6>
+                                <h6>2879 lượt đăng ký</h6>
+                            </div>
+                            <div class="rating hidden-sm col-md-6">
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        </div>
+    </section>
+
+    <footer class=" pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-12">
+                    <div class="list-group text-center">
+                        <h3 class="text-uppercase ">CyberSoft</h3>
+                        <ul class="list-unstyled">
+                            <a class="list-unstyled text-white" href="../pages/index.html">
+                                <li>Trang chủ</li>
+                            </a>
+                            <a class="list-unstyled text-white" href="../pages/index.html">
+                                <li>Khóa học</li>
+                            </a>
+                            <a class="list-unstyled text-white" href="../pages/index.html">
+                                <li>Liên hệ ngay</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12">
+                    <div class="list-group text-center">
+                        <h3 class="text-uppercase">Khóa học phổ biến</h3>
+                        <ul class="list-unstyled">
+                            <a class="list-unstyled text-white" href="../pages/khoahoc.html">
+                                <li>Tư duy, thuật toán</li>
+                            </a>
+                            <a class="list-unstyled text-white" href="../pages/khoahoc.html">
+                                <li>Lập trình Frondend</li>
+                            </a>
+                            <a class="list-unstyled text-white" href="../pages/khoahoc.html">
+                                <li>Lập trình backend</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12">
+                    <div class="list-group text-center">
+                        <h3 class="text-uppercase">Về Cyber</h3>
+                        <ul class="list-unstyled">
+                            <a class="list-unstyled text-white" href="../pages/khoahoc.html">
+                                <li>Khóa học Online</li>
+                            </a>
+                            <a class="list-unstyled text-white" href="../pages/khoahoc.html">
+                                <li>Giảng viên tâm huyết</li>
+                            </a>
+                            <a class="list-unstyled text-white" href="../pages/khoahoc.html">
+                                <li>Môi trường năng động....</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0 p-0 align-items-center">
+                <div class="col-8 m-0 p-0">
+                    <p class="float-left">Copyright ©2018 CyberSoft All rights reserved</p>
+                </div>
+                <div class="col-4 m-0 p-0 ">
+                    <div class="d-flex float-right">
+                        <div class="social-lh">
+                            <i class="fa fa-facebook"></i>
+                        </div>
+                        <div class="social-lh">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                        <div class="social-lh">
+                            <i class="fa fa-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script src="../../assets/src1/resources/js/jquery.min.js"></script>
+    <script src="../../assets/src1/resources/js/popper.min.js"></script>
+    <script src="../../assets/src1/resources/js/bootstrap.min.js"></script>
+    <script src="../../assets/src1/resources/js/slick.js"></script>
+    <script src="../../assets/src1/resources/js/main.js"></script>
+
+    <script src="../../services/DangNhapService.js" type="text/javascript"></script>
+    <script src="../../services/DangKyService.js" type="text/javascript"></script>
+    <script src="../../services/ThongTinService.js" type="text/javascript"></script>
+    <script src="../../services/GhiDanhService.js" type="text/javascript"></script>
+    <script src="../../controllers/main_taikhoan.js" type="text/javascript"></script>
+
+</body>
+
+</html>

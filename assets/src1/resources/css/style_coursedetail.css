@@ -1,0 +1,35 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden; }
+
+
+#page-header {
+  height: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../src1/img/banner-bg.jpg");
+  /* background-size: cover; */
+  background-position: 0 -360px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+}
+#page-header img {
+  width: 70%;
+  padding-top: 20px; }
+
+
+
+/* footer */
+footer {
+  background-color: #04091e;
+  color: #e1e1e1;
+}
+.social-lh {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+}
+

@@ -1,0 +1,38 @@
+iframe {
+    max-width: 150px;
+    max-height: 100px;
+    border-radius: 4px 4px 0 0;
+}
+
+.trKhoaHoc:hover {
+    background-color: rgba(103, 95, 117, 0.623);
+    cursor: pointer;
+}
+
+input[type=text]::-webkit-input-placeholder { color: red; }
+input[type=email]::-webkit-input-placeholder { color: red; }
+input[type=number]::-webkit-input-placeholder { color: red; }
+
+::-webkit-input-placeholder {
+    font-weight: 800;
+    font-size: 16px;
+    color: red;
+}
+
+:-moz-placeholder {
+    font-weight: 800;
+    font-size: 16px;
+    color: red;
+}
+
+::-moz-placeholder {
+    font-weight: 800;
+    font-size: 16px;
+    color: red;
+}
+
+:-ms-input-placeholder {
+    font-weight: 800;
+    font-size: 16px;
+    color: red;
+}

@@ -1,0 +1,194 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+.btn-facebook {
+  background-color: #1a538a; }
+
+.cardkhoahoc{
+    min-width: 250px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden; }
+
+/* phần nav bar*/
+.navbar {
+  color: #000;
+}
+.navbar .nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+.navbar .nav-item:hover {
+  font-weight: bold;
+  border-bottom: solid 2px #eb7617;
+}
+
+.fa {
+  font-size: 20px; }
+
+.checked {
+  color: orange; }
+
+
+#banner {
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../src1/img/banner-bg.jpg");
+  background-size: cover;
+  background-position: 0 -360px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px; }
+
+#banner img {
+  width: 70%;
+  padding-top: 20px; }
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  height: 350px;
+  margin-top: 93px; }
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s; }
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd; }
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc; }
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+   }
+
+#MyCourses .fa {
+  font-size: 15px; }
+
+
+.card{
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+  
+.col-item {
+  border: 1px solid #E1E1E1;
+  border-radius: 5px;
+  background: #FFF; }
+
+.col-item .photo img {
+  margin: 0 auto;
+  width: 100%; }
+
+.col-item .info {
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  margin-top: 1px; }
+
+.col-item:hover .info {
+  background-color: #F5F5DC; }
+
+.col-item .price {
+ 
+  float: left;
+  margin-top: 5px; }
+
+.col-item .price h5 {
+  line-height: 20px;
+  margin: 0; }
+
+.price-text-color {
+  color: #219FD1; }
+
+.col-item .info .rating {
+  color: #777; }
+
+.col-item .rating {
+
+  float: left;
+  font-size: 17px;
+  text-align: right;
+  line-height: 52px;
+  margin-bottom: 10px;
+  height: 52px; }
+
+.col-item .separator {
+  border-top: 1px solid #E1E1E1; }
+
+.clear-left {
+  clear: left; }
+
+.col-item .separator p {
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center; }
+
+.col-item .separator p i {
+  margin-right: 5px; }
+
+.col-item .btn-add {
+  width: 50%;
+  float: left; }
+
+.col-item .btn-add {
+  border-right: 1px solid #E1E1E1; }
+
+.col-item .btn-details {
+  width: 50%;
+  float: left;
+  padding-left: 10px; }
+
+.controls {
+  margin-top: 20px; }
+
+[data-slide="prev"] {
+  margin-right: 10px; }
+
+/*# sourceMappingURL=style.css.map */
+
+/* footer */
+footer {
+  background-color: #04091e;
+  color: #e1e1e1;
+}
+.social-lh {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.items{
+  border-radius: 10px;
+}
+.circle{
+  width:30px;
+  height:30px;
+  cursor:pointer;
+}

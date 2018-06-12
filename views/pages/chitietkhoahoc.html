@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CyberSoft</title>
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round" type="text/css">
+  <link rel="shortcut icon" type="image/png" href="../../assets/src1/resources/img/favicon.png">
+  <!--     Sweet Alert     -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Login-Register : CSS và JS -->
+  <link rel="stylesheet" href="../../assets/src1/resources/js/login-register.css">
+  <script src="../../assets/src1/resources/js/login-register.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="../../assets/src1/resources/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../assets/src1/resources/css/bootstrap.css">
+  <link rel="stylesheet" href="../../assets/src1/resources/css/style_coursedetail.css">
+  <link rel="stylesheet" href="../../assets/src1/resources/css/slick-theme.css">
+  <link rel="stylesheet" href="../../assets/src1/resources/css/slick.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm fixed-top container-fluid navbar-dark" id="menu">
+        <div class="container-fluid d-flex justify-content-center">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="d-flex justify-content-center font-weight-bold">
+            <div class="navbar-header">
+              <a class="navbar-brand text-warning" href="index.html">Cyber Soft</a>
+            </div>
+            <div class="collapse navbar-collapse text-warning" id="nav-content">
+              <ul class="navbar-nav text-uppercase ml-auto text-warning">
+                <li class="nav-item active">
+                  <a href="index.html" class="nav-link ">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="khoahoc.html" class="nav-link">Khóa học</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn nav-link font-weight-bold" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" id="TenChuTK">
+                    Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn nav-link font-weight-bold" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">
+                    Đăng ký</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+        </div>
+      </nav>
+
+  <div class="modal fade login" id="loginModal">
+    <div class="modal-dialog login animated">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Đăng nhập với</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+        </div>
+        <div class="modal-body">
+          <div class="box">
+            <div class="content">
+              <div class="social">
+                <a class="circle github" href="/auth/github">
+                  <i class="fa fa-github fa-fw"></i>
+                </a>
+                <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                </a>
+                <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                  <i class="fa fa-facebook fa-fw"></i>
+                </a>
+              </div>
+              <div class="division">
+                <div class="line l"></div>
+                <span>or</span>
+                <div class="line r"></div>
+              </div>
+              <div class="error"></div>
+              <div class="form loginBox">
+                <form method="post" action="/login" accept-charset="UTF-8">
+                  <input id="taikhoan_dn" class="form-control" type="text" placeholder="Tài khoản" name="email">
+                  <input id="matkhau_dn" class="form-control" type="password" placeholder="Mật khẩu" name="password">
+                  <input class="btn btn-default btn-login" type="button" value="Đăng nhập" id="btnDangNhap">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="content registerBox" style="display:none;">
+              <div class="form">
+                <form>
+                  <div class="form-group input-group">
+                    <input type="text" placeholder="Tài khoản" class="form-control" id="TK">
+                  </div>
+                  <div class="form-group input-group">
+                    <input type="password" placeholder="Mật khẩu " class="form-control" id="MK">
+                  </div>
+
+                  <div class="form-group input-group">
+                    <input type="text" placeholder="Họ tên" class="form-control" id="HT">
+                  </div>
+
+                  <div class="form-group input-group">
+                    <input type="email" placeholder="Email" class="form-control" id="EM">
+                  </div>
+
+                  <div class="form-group input-group">
+                    <input type="number" placeholder="Số điện thoại" class="form-control" id="SDT">
+                  </div>
+                </form>
+                <div class="form-group">
+                  <button class="btn btn-danger  btn-login" id="btnDangKy">Đăng ký</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="forgot login-footer">
+            <span>Bạn chưa có tài khoản ?
+              <a href="javascript: showRegisterForm();">Tạo ngay</a>
+            </span>
+          </div>
+          <div class="forgot register-footer" style="display:none">
+            <span>Bạn đã có tài khoản ?</span>
+            <a href="javascript: showLoginForm();">Đăng nhập</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <header id="page-header" class=" d-none d-md-block">
+    <div class="container">
+
+        <h1 class="font-weight- text-uppercase font-weight-bold">Chi tiết khóa học</h1>
+        <p class="text-white link-nav">
+            <a href="khoahoc.html" class="text-white">Khóa học </a>
+            <span class="lnr lnr-arrow-right"><i class="fa fa-angle-double-right"></i></span>
+            <a href="chitietkhoahoc.html" class="text-white"> Chi tiết khóa học</a>
+        </p>
+
+      <div class="row">
+        <div class="col-md-6 mt-3">
+          <h2 id="tenkhoahoc1">Lập trình Frondend 06</h2>
+          <p id="luotxem1">Lượt xem: </p>
+          <a href="" class="btn btn-primary btn-lg mt-3">Bắt đầu chương 1</a>
+          <div class="rating hidden-sm mt-3">
+            <i class="price-text-color fa fa-star"></i>
+            <i class="price-text-color fa fa-star">
+            </i>
+            <i class="price-text-color fa fa-star"></i>
+            <i class="price-text-color fa fa-star">
+            </i>
+            <i class="fa fa-star"></i>
+            <span class="ml-3">Đánh giá khóa học</span>
+          </div>
+          <!-- progress bar -->
+          <div class="mt-3">21 of 75 khóa hoàn thành</div>
+          <div class="progress border mt-3">
+            <div class="progress-bar bg-white" style="width:60%"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <img src="../../assets/src1/resources/img/img2.jpg" alt="" srcset="" class="img-fluid" id="hinhanh1">
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+
+
+
+  <!-- FAQ -->
+
+  <section id="faq" class="p-5 text-dark">
+
+    <div class="container">
+      <h1 class="text-center text-warning">Nội dung khóa học</h1>
+      <hr>
+      <div class="row">
+
+        <div class="col-md-8">
+          <div class="items p-2 bg-dark text-white d-flex justify-content-between align-items-center">
+            <div class="item-detail">
+              <p class="text-warning">chương 1</p>
+              <h4>Giới thiệu về khóa học</h4>
+              <p>Giới thiệu chương tổng quan ...</p>
+            </div>
+            <div data-toggle="collapse" data-target="#item1-content" class="circle mr-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fa fa-plus"></i>
+            </div>
+          </div>
+          <div id="item1-content" class="collapse">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum alias  odit mollitia ab dolorem, </p>
+          </div>
+          <div class="items p-2 bg-dark text-white d-flex justify-content-between align-items-center">
+            <div class="item-detail">
+              <p class="text-warning">chương 2</p>
+              <h4>Giới thiệu về khóa học</h4>
+              <p>Giới thiệu chương tổng quan ...</p>
+            </div>
+            <div data-toggle="collapse" data-target="#item2-content" class="circle mr-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fa fa-plus"></i>
+            </div>
+          </div>
+          <div id="item2-content" class="collapse"> provident vitae laboriosam ratione, doloribus volupt, minima!</p>
+          </div>
+          <div class="items p-2 bg-dark text-white d-flex justify-content-between align-items-center ">
+            <div class="item-detail">
+              <p class="text-warning">chương 3</p>
+              <h4>Giới thiệu về khóa học</h4>
+              <p>Giới thiệu chương tổng quan ...</p>
+            </div>
+            <div data-toggle="collapse" data-target="#item3-content" class="circle mr-3 rounded-circle  d-flex align-items-center justify-content-center">
+              <i class="fa fa-plus"></i>
+            </div>
+          </div>
+          <div id="item3-content" class="collapse">
+            <p>Lorem ipsum dolor sit amet, consectetur adip quod aliquid. Ducimus voluptas veraridistinctioe inima!</p>
+          </div>
+          <div class="items p-2 bg-dark text-white d-flex justify-content-between align-items-center">
+            <div class="item-detail">
+              <p class="text-warning">chương 4</p>
+              <h4>Giới thiệu về khóa học</h4>
+              <p>Giới thiệu chương tổng quan ...</p>
+            </div>
+            <div data-toggle="collapse" data-target="#item4-content" class="circle mr-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fa fa-plus"></i>
+            </div>
+          </div>
+          <div id="item4-content" class="collapse">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum alias d maiores, vero fRe minima!</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4" id="fix-card">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="" alt="Card image" id="hinhanh2">
+            <div class="card-body">
+              <h4 class="card-title" id="tenkhoahoc2">Tên khóa học</h4>
+              <p class="card-text" id="nguoitao1">Người dạy</p>
+              <h6 class="btn btn-warning text-center">Đang cập nhật...</h6>
+
+              <a href="#" class="btn btn-outline-primary btn-block mt-5" id="ghidanh">Ghi danh khóa học</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class=" pt-4">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-4 col-md-12">
+                  <div class="list-group text-center">
+                      <h3 class="text-uppercase">CyberSoft</h3>
+                      <ul class="list-unstyled">
+                        <a class="list-unstyled text-white" href="../pages/index.html"><li>Trang chủ</li></a>
+                        <a class="list-unstyled text-white" href="../pages/index.html"><li>Khóa học</li></a>
+                        <a class="list-unstyled text-white" href="../pages/index.html"><li>Liên hệ ngay</li></a>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-12">
+                  <div class="list-group text-center">
+                      <h3 class="text-uppercase">Khóa học phổ biến</h3>
+                      <ul class="list-unstyled">
+                          <a class="list-unstyled text-white" href="../pages/khoahoc.html"><li>Tư duy, thuật toán</li></a>
+                          <a class="list-unstyled text-white" href="../pages/khoahoc.html"><li>Lập trình Frondend</li></a>
+                          <a class="list-unstyled text-white" href="../pages/khoahoc.html"><li>Lập trình backend</li></a>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-12">
+                  <div class="list-group text-center">
+                      <h3 class="text-uppercase">Về Cyber</h3>
+                      <ul class="list-unstyled">
+                          <a class="list-unstyled text-white" href="../pages/khoahoc.html"><li>Khóa học Online</li></a>
+                          <a class="list-unstyled text-white" href="../pages/khoahoc.html"><li>Giảng viên tâm huyết</li></a>
+                          <a class="list-unstyled text-white" href="../pages/khoahoc.html"><li>Môi trường năng động....</li></a>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="row m-0 p-0 align-items-center justify-content-between">
+              <div class="col-8 m-0 p-0">
+                  <p class="float-left">Copyright ©2018 CyberSoft All rights reserved</p>
+              </div>
+              <div class="col-4 m-0 p-0">
+                  <div class="d-flex float-right">
+                      <div class="social-lh">
+                          <i class="fa fa-facebook"></i>
+                      </div>
+                      <div class="social-lh">
+                          <i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="social-lh">
+                          <i class="fa fa-google"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="clearfix">
+
+              </div>
+          </div>
+      </div>
+      </div>
+  </footer>
+
+
+  <script src="../../assets/src1/resources/js/jquery.min.js"></script>
+  <script src="../../assets/src1/resources/js/popper.min.js"></script>
+  <script src="../../assets/src1/resources/js/bootstrap.min.js"></script>
+  <script src="../../assets/src1/resources/js/slick.js"></script>
+  <script src="../../assets/src1/resources/js/main.js"></script>
+
+  <script src="../../services/DangNhapService.js" type="text/javascript"></script>
+  <script src="../../services/DangKyService.js" type="text/javascript"></script>
+  <script src="../../services/ThongTinService.js" type="text/javascript"></script>
+  <script src="../../services/GhiDanhService.js" type="text/javascript"></script>
+  <script src="../../controllers/main_taikhoan.js" type="text/javascript"></script>
+
+</body>
+
+</html>
